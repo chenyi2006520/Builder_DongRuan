@@ -90,6 +90,8 @@ namespace Maticsoft.BuilderModel
             strclass.AppendLine("namespace " + Modelpath);
             strclass.AppendLine("{");
             strclass.AppendSpaceLine(1, "/// <summary>");
+
+
             if (TableDescription.Length > 0)
             {
                 strclass.AppendSpaceLine(1, "/// " + TableDescription.Replace("\r\n", "\r\n\t///"));
