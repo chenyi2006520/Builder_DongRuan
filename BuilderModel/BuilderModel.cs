@@ -105,7 +105,7 @@ namespace Maticsoft.BuilderModel
             strclass.AppendSpaceLine(1, "[global::System.Data.Linq.Mapping.TableAttribute(Name = \"dbo." + _modelname + "\")]");
             strclass.AppendSpaceLine(1, "public partial class " + _modelname + "Model : INotifyPropertyChanging, INotifyPropertyChanged,IEnumerable");
             strclass.AppendSpaceLine(1, "{");
-            strclass.AppendSpaceLine(2, "public " + _modelname + "()");
+            strclass.AppendSpaceLine(2, "public " + _modelname + "Model()");
             strclass.AppendSpaceLine(2, "{}");
             strclass.AppendLine(CreatModelMethod());
             strclass.AppendSpaceLine(1, "}");

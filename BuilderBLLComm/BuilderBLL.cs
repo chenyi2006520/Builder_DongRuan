@@ -101,7 +101,7 @@ namespace Maticsoft.BuilderBLLComm
         public string ModelName
         {
             set { _modelname = value; }
-            get { return _modelname; }
+            get { return _modelname+"Model"; }
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Maticsoft.BuilderBLLComm
 
             if ((IClass != "") && (IClass != null))
             {
-                strclass.AppendSpaceLine(2, "private readonly " + NameSpace + ".IDAL." + IClass + " dal=" + NameSpace + ".DALFactory.DataAccess.Create" + DALName + "();");
+                strclass.AppendSpaceLine(2, "private readonly " + NameSpace + ".IDAL." + IClass + "DAL dal=" + NameSpace + ".DALFactory.DataAccess.Create" + DALName + "BLL();");
                 //if (Folder != "")
                 //{
                 //    strclass.AppendSpaceLine(2, "private readonly " + IClass + " dal=" + "DataAccess<" + IClass + ">.Create(\"" + Folder + "." + DALName + "\");");
@@ -342,9 +342,9 @@ namespace Maticsoft.BuilderBLLComm
             }
             else
             {
-                strclass.AppendSpaceLine(2, "private readonly " + DALSpace + " dal=" + "new " + DALSpace + "();");
+                strclass.AppendSpaceLine(2, "private readonly " + DALSpace + "DAL dal=" + "new " + DALSpace + "DAL();");
             }
-            strclass.AppendSpaceLine(2, "public " + BLLName + "()");
+            strclass.AppendSpaceLine(2, "public " + BLLName + "BLL()");
             strclass.AppendSpaceLine(2, "{}");
             strclass.AppendSpaceLine(2, "#region  BasicMethod");
 

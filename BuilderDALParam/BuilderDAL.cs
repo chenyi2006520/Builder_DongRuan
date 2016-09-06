@@ -131,7 +131,7 @@ namespace Maticsoft.BuilderDALParam
         public string ModelName
         {
             set { _modelname = value; }
-            get { return _modelname; }
+            get { return _modelname + "Model"; }
         }
         /// <summary>
         /// 实体类的整个命名空间 + 类名，即等于 Modelpath+ModelName
@@ -453,7 +453,7 @@ namespace Maticsoft.BuilderDALParam
             }
             strclass.AppendLine("");
             strclass.AppendSpaceLine(1, "{");
-            strclass.AppendSpaceLine(2, "public " + DALName + "()");
+            strclass.AppendSpaceLine(2, "public " + DALName + "DAL()");
             strclass.AppendSpaceLine(2, "{}");
             strclass.AppendSpaceLine(2, "#region  BasicMethod");
 
