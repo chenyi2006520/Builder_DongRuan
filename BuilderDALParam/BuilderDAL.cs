@@ -446,7 +446,7 @@ namespace Maticsoft.BuilderDALParam
             strclass.AppendSpaceLine(1, "/// <summary>");
             strclass.AppendSpaceLine(1, "/// " + Languagelist["summary"].ToString() + ":" + DALName);
             strclass.AppendSpaceLine(1, "/// </summary>");
-            strclass.AppendSpace(1, "public partial class " + DALName);
+            strclass.AppendSpace(1, "public partial class " + DALName +"DAL");
             if (IClass != "")
             {
                 strclass.Append(":" + IClass);

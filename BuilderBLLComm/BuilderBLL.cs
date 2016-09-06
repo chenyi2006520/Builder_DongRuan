@@ -325,7 +325,7 @@ namespace Maticsoft.BuilderBLLComm
                 strclass.AppendSpaceLine(1, "/// " + BLLName + ":" + Languagelist["summary"].ToString());
             }
             strclass.AppendSpaceLine(1, "/// </summary>");
-            strclass.AppendSpaceLine(1, "public partial class " + BLLName);
+            strclass.AppendSpaceLine(1, "public partial class " + BLLName +"BLL");
             strclass.AppendSpaceLine(1, "{");
 
             if ((IClass != "") && (IClass != null))
