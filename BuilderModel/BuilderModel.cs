@@ -103,7 +103,8 @@ namespace Maticsoft.BuilderModel
             strclass.AppendSpaceLine(1, "/// </summary>");
             strclass.AppendSpaceLine(1, "[Serializable]");
             strclass.AppendSpaceLine(1, "[global::System.Data.Linq.Mapping.TableAttribute(Name = \"dbo." + _modelname + "\")]");
-            strclass.AppendSpaceLine(1, "public partial class " + _modelname + "Model : INotifyPropertyChanging, INotifyPropertyChanged,IEnumerable");
+            //strclass.AppendSpaceLine(1, "public partial class " + _modelname + "Model : INotifyPropertyChanging, INotifyPropertyChanged,IEnumerable");
+            strclass.AppendSpaceLine(1, "public partial class " + _modelname + "Model : INotifyPropertyChanging, INotifyPropertyChanged");
             strclass.AppendSpaceLine(1, "{");
             strclass.AppendSpaceLine(2, "public " + _modelname + "Model()");
             strclass.AppendSpaceLine(2, "{}");
@@ -331,12 +332,12 @@ namespace Maticsoft.BuilderModel
             strclass.AppendSpaceLine(2, " public event PropertyChangedEventHandler PropertyChanged;");
             strclass.AppendSpaceLine(2, "#endregion");
 
-            strclass.AppendSpaceLine(2, "#region IEnumerator 成员");
-            strclass.AppendSpaceLine(2, " public IEnumerator GetEnumerator()");
-            strclass.AppendSpaceLine(2, "{");
-            strclass.AppendSpaceLine(2, " throw new NotImplementedException();");
-            strclass.AppendSpaceLine(2, "}");
-            strclass.AppendSpaceLine(2, "#endregion");
+            //strclass.AppendSpaceLine(2, "#region IEnumerator 成员");
+            //strclass.AppendSpaceLine(2, " public IEnumerator GetEnumerator()");
+            //strclass.AppendSpaceLine(2, "{");
+            //strclass.AppendSpaceLine(2, " throw new NotImplementedException();");
+            //strclass.AppendSpaceLine(2, "}");
+            //strclass.AppendSpaceLine(2, "#endregion");
 
             return strclass.ToString(); 
         }
