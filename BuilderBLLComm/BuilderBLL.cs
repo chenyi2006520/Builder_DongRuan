@@ -615,8 +615,8 @@ namespace Maticsoft.BuilderBLLComm
             strclass.AppendSpaceLine(3, "object objModel = " + NameSpace + ".Common.DataCache.GetCache(CacheKey);");
             strclass.AppendSpaceLine(3, "if (objModel == null)");
             strclass.AppendSpaceLine(3, "{");
-            strclass.AppendSpaceLine(4, "try");
-            strclass.AppendSpaceLine(4, "{");
+            //strclass.AppendSpaceLine(4, "try");
+            //strclass.AppendSpaceLine(4, "{");
             strclass.AppendSpaceLine(5, "objModel = dal.GetModel(" + Maticsoft.CodeHelper.CodeCommon.GetFieldstrlist(Keys, true) + ");");
             strclass.AppendSpaceLine(5, "if (objModel != null)");
             strclass.AppendSpaceLine(5, "{");
@@ -624,8 +624,8 @@ namespace Maticsoft.BuilderBLLComm
             //strclass.AppendSpaceLine(6, "int ModelCache = Globals.SafeInt(BLL.SysManage.ConfigSystem.GetValueByCache(\"CacheTime\"), 30);");
             strclass.AppendSpaceLine(6, "" + NameSpace + ".Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);");
             strclass.AppendSpaceLine(5, "}");
-            strclass.AppendSpaceLine(4, "}");
-            strclass.AppendSpaceLine(4, "catch{}");
+            //strclass.AppendSpaceLine(4, "}");
+            //strclass.AppendSpaceLine(4, "catch{}");
             strclass.AppendSpaceLine(3, "}");
             strclass.AppendSpaceLine(3, "return (" + ModelSpace + ")objModel;");
             strclass.AppendSpaceLine(2, "}");

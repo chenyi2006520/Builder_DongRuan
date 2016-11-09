@@ -852,7 +852,8 @@ namespace Maticsoft.BuilderDALParam
             strclass.AppendSpaceLine(2, "{");
             strclass.AppendSpaceLine(3, KeysNullTip);
             strclass.AppendSpaceLine(3, "StringBuilder strSql=new StringBuilder();");
-            strclass.AppendSpaceLine(3, "strSql.Append(\"delete from " + _tablename + " \");");
+            //strclass.AppendSpaceLine(3, "strSql.Append(\"delete from " + _tablename + " \");");
+            strclass.AppendSpaceLine(3, "strSql.Append(\"update " + _tablename + " set  DelFlag = 1 \" );");
             strclass.AppendSpaceLine(3, "strSql.Append(\" where " + CodeCommon.GetWhereParameterExpression(Keys, true, dbobj.DbType) + "\");");
             strclass.AppendLine(CodeCommon.GetPreParameter(Keys, true, dbobj.DbType));
             strclass.AppendSpaceLine(3, "int rows=" + DbHelperName + ".ExecuteSql(strSql.ToString(),parameters);");
